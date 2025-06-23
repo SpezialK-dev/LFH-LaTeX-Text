@@ -1,10 +1,54 @@
-\documentclass[a4paper, 11pt , german]{article}
+\documentclass[a4paper, 11pt ]{article}
 %\usepackage{babel}
 %\usepackage{biblatex}
 
-%\usepackage{helvet}
-%\renewcommand{\familydefault}{\sfdefault}
-\begin{document}
 
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\def\quellen{Quellenverzeichnis} % Quellen
+
+% setting date to the korrect format 
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+% definiert true and false
+
+\def\True{True}
+\def\False{False}
+
+\begin{document}
+\include{Informationen.tex}
+
+
+% doing the main page and some other stuff
+
+
+\newpage
+\tableofcontents
+
+
+%
+   % nSperrvermerk wennötig
+
+\if \Sperrvermerk  \True
+ \section*{Sperrvermerk}
+ Die in dieser schriftlichen Arbeit enthaltenen Informationen sind vertraulichund ausschließlich
+ für die entsprechenden Prüfer und Mitarbeiter der Leibniz-Akademie bestimmt.
+Jeglicher Zugriff durch andere Personen, Veröffentlichung, Vervielfältigung,
+Verteilung oder sonstige in diesem Zusammenhang stehende Handlung sind nur mit ausdrücklicher
+Genehmigung der Verf. und \Firma\space zulässig. Darüber hinaus besitzt der
+Verf. die urheberrecht\-lichen Ansprüche und \Firma\space die Nutzungsrechte
+an bzw. aus dieser Arbeit.
+\fi
+% including most of the random text stuff
+\include{Introduction.tex}
+
+\include{Main_part.tex}
+
+\include{Ending.tex}
+
+
+%TODO Bibtex stuff
 
 \end{document}
