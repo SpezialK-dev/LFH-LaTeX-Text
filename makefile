@@ -5,4 +5,4 @@ all: compile_tex
 TEXTFILES = src/main.tex
 
 compile_tex: 
-	latexmk -pdf $(TEXTFILES)
+	latexmk -pdf  -silent -synctex=1 $(TEXTFILES)

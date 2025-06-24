@@ -1,10 +1,17 @@
 \documentclass[a4paper, 11pt ]{article}
 %\usepackage{babel}
 %\usepackage{biblatex}
+\usepackage{geometry}
 
+% der Geometrie
+\geometry{top=2.5cm, bottom=2.0cm , left=4.0cm , right=2.0cm ,a4paper}
 
+% alles was irgendwie mit fonts, font groessen und so zu tun hat 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+
+
+
 
 \def\quellen{Quellenverzeichnis} % Quellen
 
@@ -14,8 +21,8 @@
 
 % definiert true and false
 
-\def\True{True}
-\def\False{False}
+\def\True{1}
+\def\False{0}
 
 \begin{document}
 \include{Informationen.tex}
@@ -23,15 +30,15 @@
 
 % doing the main page and some other stuff
 
-
+% Table of Contents und Sperrvermerk
 \newpage
 \tableofcontents
 
 
-%
-   % nSperrvermerk wennötig
-
-\if \Sperrvermerk  \True
+% nSperrvermerk wennötig
+% einstellbar in Information.tex
+\if\Sperrvermerk \True
+\newpage
  \section*{Sperrvermerk}
  Die in dieser schriftlichen Arbeit enthaltenen Informationen sind vertraulichund ausschließlich
  für die entsprechenden Prüfer und Mitarbeiter der Leibniz-Akademie bestimmt.
@@ -40,7 +47,10 @@ Verteilung oder sonstige in diesem Zusammenhang stehende Handlung sind nur mit a
 Genehmigung der Verf. und \Firma\space zulässig. Darüber hinaus besitzt der
 Verf. die urheberrecht\-lichen Ansprüche und \Firma\space die Nutzungsrechte
 an bzw. aus dieser Arbeit.
+\newpage
 \fi
+
+
 % including most of the random text stuff
 \include{Introduction.tex}
 
