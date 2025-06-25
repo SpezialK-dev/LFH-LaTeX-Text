@@ -1,10 +1,16 @@
-\documentclass[a4paper, 11pt ]{article}
-%\usepackage{babel}
+\documentclass[a4paper, 11pt, german ]{article}
+\usepackage{babel}
 %\usepackage{biblatex}
+\usepackage{titling} % ja es gibt andere wege wie man das in ohne dieses package machen kann aber habe keinen zum funktioniern bekommen
 \usepackage{geometry}
 
 % der Geometrie
 \geometry{top=2.5cm, bottom=2.0cm , left=4.0cm , right=2.0cm ,a4paper}
+
+% definiert true and false
+\def\True{1}
+\def\False{0}
+
 
 % alles was irgendwie mit fonts, font groessen und so zu tun hat 
 \usepackage{helvet}
@@ -19,20 +25,82 @@
 \usepackage[ddmmyyyy]{datetime}
 \renewcommand{\dateseparator}{.}
 
-% definiert true and false
-
-\def\True{1}
-\def\False{0}
 
 \begin{document}
 \include{Informationen.tex}
+% Hauptseiten Zeug
+\begin{titlepage}
+\if\BachlorThesis\True
+	\newgeometry{top=1.31cm, bottom=0.49cm , left=2.29cm , right=2.29cm ,a4paper}
+	\vspace*{20ex}
+	\begin{center}
+		
+		\textbf{\thetitle}\\
+		\vspace{10ex}
+		Bachelor-Thesis\\
+		an der \\
+		Leibniz-Fachhochschule\\
+		im Rahmen des Studiengangs \\
+		\Studiengang \\
+		zur/ zum \Abschlussbezeinung (B.A.) bzw. (B.Sc.) \\
+	
+		\vspace{1ex}
+		vorgelegt von \\
+		\theauthor \\
+		aus\\
+		\Addresse\\
+		\Email\\
+		
+		\vspace{1ex}
+		Matr.-Nr.: \MatrNummer\\
+		
+		\vspace{10ex}
+		Erstgutachter: \Pruefer \\
+		Zweitgutachter: \ZweitGutachter \\
+		\vspace{1ex}
+		Abgabe : \thedate
+	\end{center}
+
+\else
 
 
-% doing the main page and some other stuff
+	\newgeometry{top=1.31cm, bottom=0.49cm , left=2.29cm , right=2.29cm ,a4paper}
+\raggedright
+\vspace*{20ex}
+Leibniz-Fachhochschule\\
+\Studiengang\\
+Betreut durch: \Pruefer
+
+\vspace{10ex}
+\begin{center}
+	\ArtArbeit\\
+	\vspace{1ex}
+	im Fach \Modul im \Semester\\
+	
+	\vspace{10ex}
+	\textbf{\thetitle}
+
+\end{center}
+
+\vspace{10ex}
+\theauthor\\
+\Addresse\\
+Matr.-Nr.: \MatrNummer\\
+\vspace{1ex}
+E-Mail-Adresse \Email\\
+\vspace{3ex}
+Abgabedatum: \thedate
+
+\fi
+\restoregeometry
+\end{titlepage}
 
 % Table of Contents und Sperrvermerk
 \newpage
+\pagenumbering{Roman}
 \tableofcontents
+
+
 
 
 % nSperrvermerk wennötig
@@ -52,6 +120,7 @@ an bzw. aus dieser Arbeit.
 
 
 % including most of the random text stuff
+\pagenumbering{arabic}
 \include{Introduction.tex}
 
 \include{Main_part.tex}
