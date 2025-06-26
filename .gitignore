@@ -6,3 +6,5 @@
 *.toc
 *.fls
 *.dvi
+*.*~
+src/auto/
