@@ -33,7 +33,10 @@ style=apa
 
 
 \begin{document}
+
 \include{./src/Informationen.tex}
+
+
 % Hauptseiten Zeug
 \begin{titlepage}
 \if\BachlorThesis\True
@@ -127,13 +130,18 @@ an bzw. aus dieser Arbeit.
 
 % including most of the random text stuff
 \pagenumbering{arabic}
-\include{./src/Introduction.tex}
-
-\include{./src/Main_part.tex}
-
-\include{./src/Ending.tex}
 
 
+\if\Makefile\True
+  \include{./src/Introduction.tex}
+  \include{./src/Main_part.tex}
+  \include{./src/Ending.tex}
+\else
+  \include{./Introduction.tex}
+  \include{./Main_part.tex}
+  \include{./Ending.tex}
+  
+\fi
 
 \printbibliography
 \end{document}
