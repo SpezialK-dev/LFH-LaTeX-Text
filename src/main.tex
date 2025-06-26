@@ -3,6 +3,12 @@
 %\usepackage{biblatex}
 \usepackage{titling} % ja es gibt andere wege wie man das in ohne dieses package machen kann aber habe keinen zum funktioniern bekommen
 \usepackage{geometry}
+\usepackage[
+backend=biber,
+style=apa
+]{biblatex}
+\addbibresource{./src/quellen.bib}
+
 
 % der Geometrie
 \geometry{top=2.5cm, bottom=2.0cm , left=4.0cm , right=2.0cm ,a4paper}
@@ -27,7 +33,7 @@
 
 
 \begin{document}
-\include{Informationen.tex}
+\include{./src/Informationen.tex}
 % Hauptseiten Zeug
 \begin{titlepage}
 \if\BachlorThesis\True
@@ -121,13 +127,13 @@ an bzw. aus dieser Arbeit.
 
 % including most of the random text stuff
 \pagenumbering{arabic}
-\include{Introduction.tex}
+\include{./src/Introduction.tex}
 
-\include{Main_part.tex}
+\include{./src/Main_part.tex}
 
-\include{Ending.tex}
+\include{./src/Ending.tex}
 
 
-%TODO Bibtex stuff
 
+\printbibliography
 \end{document}

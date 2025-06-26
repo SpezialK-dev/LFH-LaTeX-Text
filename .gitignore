@@ -7,4 +7,8 @@
 *.fls
 *.dvi
 *.*~
+*.bbl
+*.bcf
+*.blg
+*.run.xml
 src/auto/
