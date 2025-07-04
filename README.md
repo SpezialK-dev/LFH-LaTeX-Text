@@ -7,6 +7,7 @@
 2. aufrufen von `make` um die Datei zu compilieren 
 
 
+
 ## Informationen.tex
 
 Der Erste Teil beschäftigt sich lediglich mit denn Persönlichen Informationenn
@@ -62,3 +63,17 @@ die folgenden beiden Pfade müssen angepasst werden wenn der Toggle auf 0 / Fals
 Introduction.tex -> Deine Einleitung 
 Main_part.tex    -> Dein Hauptteil dies sollte der größte teil sein du kannst auch gerne hier weitere Unterteilungen machen 
 Ending.tex       -> Dein schlussteil
+
+
+
+# Make Dokumentation 
+
+die makefile wenn einfach so aufgerufen, compiliert das projekt
+
+## clean 
+
+```shell
+$ make clean
+```
+
+löscht alle auxillary files und lässt nur die pdf über
