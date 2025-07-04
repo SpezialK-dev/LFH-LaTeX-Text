@@ -56,7 +56,9 @@ die folgenden beiden Pfade müssen angepasst werden wenn der Toggle auf 0 / Fals
 ```
 \include{./src/Informationen.tex}
 ```
+#### digitalSig
 
+Toggelt ob ein Bild (von deiner Unterschrift) oder eine digitales Signaturfeld erscheinen soll auf der Ehrenwörtlichen erklärung, Wenn true wird ein digitales Signatur feld verwendet 
 
 # Die verschiedene Datein 
 
