@@ -62,6 +62,9 @@ Toggelt ob ein Bild (von deiner Unterschrift) oder eine digitales Signaturfeld e
 
 # Die verschiedene Datein 
 
+Diese Findet man Unter /src/Inhalt sodass man sich mit den anderen Datein nicht beschäftigen muss bis auf die Quellen Datei.
+
+
 Introduction.tex -> Deine Einleitung 
 Main_part.tex    -> Dein Hauptteil dies sollte der größte teil sein du kannst auch gerne hier weitere Unterteilungen machen 
 Ending.tex       -> Dein schlussteil

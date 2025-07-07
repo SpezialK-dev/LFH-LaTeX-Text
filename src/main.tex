@@ -6,7 +6,7 @@
 \usepackage{setspace}
 
 \usepackage{hyperref}
-\usepackage{digsig} % sollte in TEX live installiert sein wird nur für signaturen benötigt
+%\usepackage{digsig} % sollte in TEX live installiert sein wird nur für signaturen benötigt
 
 
 \usepackage[
@@ -40,7 +40,7 @@ style=apa
 
 \begin{document}
 
-\include{./src/Informationen.tex}
+\include{./src/Inhalt/Informationen.tex}
 
 
 % Hauptseiten Zeug
@@ -139,13 +139,13 @@ an bzw. aus dieser Arbeit.
 
 
 \if\Makefile\True
-  \include{./src/Introduction.tex}
-  \include{./src/Main_part.tex}
-  \include{./src/Ending.tex}
+  \include{./src/Inhalt/Introduction.tex}
+  \include{./src/Inhalt/Main_part.tex}
+  \include{./src/Inhalt/Ending.tex}
 \else
-  \include{./Introduction.tex}
-  \include{./Main_part.tex}
-  \include{./Ending.tex}
+  \include{./Inhalt/Introduction.tex}
+  \include{./Inhalt/Main_part.tex}
+  \include{./Inhalt/Ending.tex}
   
 \fi
 
@@ -170,8 +170,16 @@ Ich bin damit einverstanden, dass die Arbeit einer elektronischen Plagiatsprüfu
 kann. Die Regelungen der Prüfungsordnung zur Täuschung habe ich zur Kenntnis genommen.
 
 % TODO toggel hinzufügen 
-\begin{Form}
-  \digsigfield{5cm}{3cm}{Meine Unterschrift}
-\end{Form}
+
+%\if\digitalSig\True
+%
+%  \begin{Form}
+%
+%  \digsigfield{5cm}{3cm}{Meine Unterschrift}
+%\end{Form}
+%\else
+%  Meine Unterschrift
+%\fi
+
 
 \end{document}
