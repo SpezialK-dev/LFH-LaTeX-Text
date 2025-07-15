@@ -56,6 +56,14 @@ die folgenden beiden Pfade müssen angepasst werden wenn der Toggle auf 0 / Fals
 ```
 \include{./src/Informationen.tex}
 ```
+
+sowie das fürs packages da muss der pfad genau gleich angepasst werden !
+
+```tex
+
+\input{./src/packages.tex}
+```
+hier müsste der pfad dann auch angepasst werden 
 #### digitalSig
 
 Toggelt ob ein Bild (von deiner Unterschrift) oder eine digitales Signaturfeld erscheinen soll auf der Ehrenwörtlichen erklärung, Wenn true wird ein digitales Signatur feld verwendet 
@@ -70,6 +78,7 @@ Main_part.tex    -> Dein Hauptteil dies sollte der größte teil sein du kannst 
 Ending.tex       -> Dein schlussteil
 
 
+die packages.tex datei ist dafür da um mehr Packages zu installieren welche nur für denn eigentlichen Text benutzt werden sollen. 
 
 # Make Dokumentation 
 
