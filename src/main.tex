@@ -24,9 +24,18 @@ style=apa
 \def\False{0}
 
 
-% alles was irgendwie mit fonts, font groessen und so zu tun hat 
+% alles was irgendwie mit fonts, font groessen und so zu tun hat
+
+% if you really care for ariel simply use this
+% you wont be able to use the makefile since that uses the wrong compiler as of now. 
+%\usepackage{fontspec}
+%\setmainfont{Arial}
+
+% mehr Informationen zu diesem Probelm
+% https://tex.stackexchange.com/questions/23957/how-to-set-font-to-arial-throughout-the-entire-document
+% Dies dient als fallback option falls es mit true ariel nicht funktioniert 
 \usepackage{helvet}
-\renewcommand{\familydef\usepackage{digsig}ault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
 
 \onehalfspacing % sollte denn Zeilenabstand auf 1.5 setzten 
 
