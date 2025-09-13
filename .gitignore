@@ -14,3 +14,4 @@
 *.bcf-SAVE-ERROR
 *.out 
 src/auto/
+*.el

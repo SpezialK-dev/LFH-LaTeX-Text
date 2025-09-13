@@ -25,23 +25,23 @@ style=apa
 % alles was irgendwie mit fonts, font groessen und so zu tun hat
 
 % if you really care for ariel simply use this
-% you wont be able to use the makefile since that uses the wrong compiler as of now. 
+% you wont be able to use the makefile since that uses the wrong compiler as of now.
 %\usepackage{fontspec}
 %\setmainfont{Arial}
 
 % mehr Informationen zu diesem Probelm
 % https://tex.stackexchange.com/questions/23957/how-to-set-font-to-arial-throughout-the-entire-document
-% Dies dient als fallback option falls es mit true ariel nicht funktioniert 
+% Dies dient als fallback option falls es mit true ariel nicht funktioniert
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\onehalfspacing % sollte denn Zeilenabstand auf 1.5 setzten 
+\onehalfspacing % sollte denn Zeilenabstand auf 1.5 setzten
 
 \input{./src/packages.tex}
 
 \def\quellen{Quellenverzeichnis} % Quellen
 
-% setting date to the korrect format 
+% setting date to the korrect format
 \usepackage[ddmmyyyy]{datetime}
 \renewcommand{\dateseparator}{.}
 
@@ -60,7 +60,7 @@ style=apa
 	\newgeometry{top=1.31cm, bottom=0.49cm , left=2.29cm , right=2.29cm ,a4paper}
 	\vspace*{20ex}
 	\begin{center}
-		
+
 		\textbf{\thetitle}\\
 		\vspace{10ex}
 		Bachelor-Thesis\\
@@ -69,17 +69,17 @@ style=apa
 		im Rahmen des Studiengangs \\
 		\Studiengang \\
 		zur/ zum \Abschlussbezeinung (B.A.) bzw. (B.Sc.) \\
-	
+
 		\vspace{1ex}
 		vorgelegt von \\
 		\theauthor \\
 		aus\\
 		\Addresse\\
 		\Email\\
-		
+
 		\vspace{1ex}
 		Matr.-Nr.: \MatrNummer\\
-		
+
 		\vspace{10ex}
 		Erstgutachter: \Pruefer \\
 		Zweitgutachter: \ZweitGutachter \\
@@ -101,8 +101,8 @@ Betreut durch: \Pruefer
 \begin{center}
 	\ArtArbeit\\
 	\vspace{1ex}
-	im Fach \Modul im \Semester\\
-	
+	im Fach \Modul~im \Semester\\
+
 	\vspace{10ex}
 	\textbf{\thetitle}
 
@@ -157,7 +157,7 @@ an bzw. aus dieser Arbeit.
   \include{./Inhalt/Introduction.tex}
   \include{./Inhalt/Main_part.tex}
   \include{./Inhalt/Ending.tex}
-  
+
 \fi
 
 \printbibliography
@@ -180,7 +180,7 @@ Studienleistung verwendet.
 Ich bin damit einverstanden, dass die Arbeit einer elektronischen Plagiatsprüfung unterzogen werden
 kann. Die Regelungen der Prüfungsordnung zur Täuschung habe ich zur Kenntnis genommen.
 
-% TODO toggel hinzufügen 
+% TODO toggel hinzufügen
 
 %\if\digitalSig\True
 %
