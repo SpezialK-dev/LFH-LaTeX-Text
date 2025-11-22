@@ -1,11 +1,11 @@
-# compilation everything 
+# compilation everything
 all: compile_tex
 
 # TEX stuff
 TEXTFILES = src/main.tex
 
-compile_tex: 
-	latexmk -pdf  -silent -synctex=1 $(TEXTFILES)
+compile_tex:
+	latexmk -pdf -gg -cd  $(TEXTFILES)
 
 help:
 	echo "available commands "
@@ -16,4 +16,4 @@ arial:
 	lualatex $(TEXTFILES)
 
 clean:
-	rm  *.aux *.blg *.bbl *.bcf *.fdb_latexmk *.fls *.log *.synctex.gz *.toc *.run.xml *.out *.bcf-SAVE-ERROR
+	latexmk -cd -C $(TEXTFILES)

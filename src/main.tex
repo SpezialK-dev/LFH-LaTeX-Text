@@ -11,7 +11,7 @@
 backend=biber,
 style=apa
 ]{biblatex}
-\addbibresource{./src/quellen.bib}
+\addbibresource{quellen.bib}
 
 
 % der Geometrie
@@ -37,7 +37,7 @@ style=apa
 
 \onehalfspacing % sollte denn Zeilenabstand auf 1.5 setzten
 
-\input{./src/packages.tex}
+\input{packages.tex}
 
 \def\quellen{Quellenverzeichnis} % Quellen
 
@@ -48,7 +48,7 @@ style=apa
 
 \begin{document}
 
-\include{./src/Inhalt/Informationen.tex}
+\include{Inhalt/Informationen.tex}
 
 \if\parenthesisCite\True
 	\let\cite\parencite
@@ -149,16 +149,9 @@ an bzw. aus dieser Arbeit.
 \pagenumbering{arabic}
 
 
-\if\Makefile\True
-  \include{./src/Inhalt/Introduction.tex}
-  \include{./src/Inhalt/Main_part.tex}
-  \include{./src/Inhalt/Ending.tex}
-\else
-  \include{./Inhalt/Introduction.tex}
-  \include{./Inhalt/Main_part.tex}
-  \include{./Inhalt/Ending.tex}
-
-\fi
+  \include{Inhalt/Introduction.tex}
+  \include{Inhalt/Main_part.tex}
+  \include{Inhalt/Ending.tex}
 
 \printbibliography
 
