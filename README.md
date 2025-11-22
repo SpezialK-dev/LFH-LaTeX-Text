@@ -43,27 +43,6 @@ falls dieser angepasst werden muss, dann muss dieser in main.tex geändert werde
 Toggelt ob das Deckblatt eine Thesis sein soll 
 0 ist für eine normale PR / Hausarbeit etc. 
 
-
-#### Makefile 
-Dieser Toggel verwaltet ob die Makefile verwendet wird oder nicht, wenn du mit deinem Text editor / Tex plugin compilen willst musst du das auf false setzten. 
-Meine Empfelung ist die makefile zu benutzten. Da diese Genau das macht wie es von mir vorgesehen ist. 
-
-
-die folgenden beiden Pfade müssen angepasst werden wenn der Toggle auf 0 / False gesetzt wurde. Dies ging leider nicht anders 
-```
-\addbibresource{./src/quellen.bib}
-```
-```
-\include{./src/Informationen.tex}
-```
-
-sowie das fürs packages da muss der pfad genau gleich angepasst werden !
-
-```tex
-
-\input{./src/packages.tex}
-```
-hier müsste der pfad dann auch angepasst werden 
 #### digitalSig
 
 Toggelt ob ein Bild (von deiner Unterschrift) oder eine digitales Signaturfeld erscheinen soll auf der Ehrenwörtlichen erklärung, Wenn true wird ein digitales Signatur feld verwendet 
