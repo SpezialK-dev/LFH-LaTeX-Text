@@ -37,7 +37,12 @@ style=apa
 % Dies dient als fallback option falls es mit true ariel nicht funktioniert
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[T1]{fontenc}
+\ifx\numexpr\undefined\else \usepackage[T1]{fontenc} \fi %eTeX is activated
+\ifx\mubyte\undefined\else \usepackage[T1]{fontenc} \fi %encTeX is activated
+\ifx\pdftexversion\undefined\else \usepackage[T1]{fontenc} \fi %pdfTeX is working
+\ifx\XeTeXrevision\undefined\else \usepackage{fontspec} \fi %XeTeX is working
+\ifx\directlua\undefined\else \usepackage{fontspec} \fi %LuaTeX is working
+
 
 \onehalfspacing % sollte denn Zeilenabstand auf 1.5 setzten
 
@@ -148,6 +153,7 @@ an bzw. aus dieser Arbeit.
 % including most of the random text stuff
 \pagenumbering{arabic}
 
+	Tesataenaidmoiadoiadmo ßß asd ßsß iueu13 eüüüü 1ä\\
 
   \include{Inhalt/Introduction.tex}
   \include{Inhalt/Main_part.tex}
