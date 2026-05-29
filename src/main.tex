@@ -4,10 +4,45 @@
 \usepackage{titling} % ja es gibt andere wege wie man das in ohne dieses package machen kann aber habe keinen zum funktioniern bekommen
 \usepackage{geometry}
 \usepackage{setspace}
-\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{acronym}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{subcaption}
+\usepackage{mathtools}
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+	inputencoding=latin1
+}
+
+\lstset{style=mystyle}
+
 
 %\usepackage{digsig} % sollte in TEX live installiert sein wird nur für signaturen benötigt
 
@@ -167,6 +202,7 @@ an bzw. aus dieser Arbeit.
   \include{Inhalt/Ending.tex}
 
 \printbibliography
+\include{Inhalt/Addendum.tex}
 
 % Ehrenwörtliche Erklärung
 
